@@ -30,10 +30,10 @@
 
 echo "Hello world ! <br/> 
       Le retour à la ligne fonctionne-t-il ?<br/>
-      Does this text appear on localhost ??";
+      Does this text appear on localhost ?? <br/>";
       
       //echo peut être utilisé directement avec des guillemets
-      echo "Ceci est du texte"; 
+      echo "Ceci est du texte <br/>"; 
    
       // <!-- Ou bien, avec des parenthèses -->
       echo("Ceci est du texte"); 
@@ -53,8 +53,12 @@ echo($name);
 echo(". Vous avez : "); 
 echo($userAge);
 echo(" ans.");
-
-
 ?>
 
+<!-- POSSIBILITÉE DE CONCATÉNER LES VARIABLES --> 
 
+<?php 
+$fullName = "Clément JEULIN";
+
+      echo('Bonjour ' . $fullName  . ' Nous sommes le ' . date('d/m/Y') . ' et il est actuellement : '. date('h:i:s'))
+?>
