@@ -52,7 +52,7 @@ echo("Bonjour ");
 echo($name);  
 echo(". Vous avez : "); 
 echo($userAge);
-echo(" ans.");
+echo(" ans. <br/>");
 ?>
 
 <!-- POSSIBILITÉE DE CONCATÉNER LES VARIABLES --> 
@@ -60,5 +60,19 @@ echo(" ans.");
 <?php 
 $fullName = "Clément JEULIN";
 
-      echo('Bonjour ' . $fullName  . ' Nous sommes le ' . date('d/m/Y') . ' et il est actuellement : '. date('h:i:s'))
+      echo('Bonjour ' . $fullName  . ' Nous sommes le ' . date('d/m/Y') . ' et il est actuellement : '. date('h:i:s') . '<br/>')
+?>
+
+<!-- LES CONDITIONS -->
+
+<?php 
+
+$isEnabled = true;
+
+if($isEnabled == true){
+      echo('Cette phrase est affichée via l\'utilisation des conditions');
+}else{
+      echo 'Accès refusé';
+};
+
 ?>
