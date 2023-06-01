@@ -43,3 +43,18 @@ echo "Hello world ! <br/>
 <!-- POSSIBILITÉ D'INCLURE DU PHP DIRECTEMENT DANS UNE BALISE HTML  -->
 <p>Aujourd'hui nous sommes le <?php echo date('d/m/Y h:i:s'); ?>.</p>
 
+
+<!-- PREMIERES VARIABLES --> 
+<?php
+$name = "Clément";
+$userAge = 27;
+echo("Bonjour "); 
+echo($name);  
+echo(". Vous avez : "); 
+echo($userAge);
+echo(" ans.");
+
+
+?>
+
+
