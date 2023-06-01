@@ -75,4 +75,77 @@ if($isEnabled == true){
       echo 'Accès refusé';
 };
 
+$isAllowed = true;
+
+if($isAllowed == true){
+      echo 'You are allowed';
+}else{
+      echo 'You are not allowed';
+}
+
+?>
+
+<!-- LE ENDIF -->
+
+<?php $chickenRecipesEnabled = true; ?>
+
+<?php if ($chickenRecipesEnabled): ?> 
+
+<h1>Liste des recettes à base de poulet</h1>
+
+<?php endif; ?>
+
+<!-- Les Switchcase -->
+<?php
+
+$note = 5;
+
+switch ($note) // on indique sur quelle variable on travaille
+{ 
+    case 0: // dans le cas où $note vaut 0
+        echo "Tu es vraiment un gros nul !!!";
+    break;
+    
+    case 5: // dans le cas où $note vaut 5
+        echo "Tu es très mauvais";
+    break;
+    
+    case 10: // etc. etc.
+        echo "Tu as pile poil la moyenne, c'est un peu juste…";
+    break;
+    
+  
+    case 20:
+        echo "Excellent travail, c'est parfait !";
+    break;
+    
+    default:
+        echo "Désolé, je n'ai pas de message à afficher pour cette note";
+}
+?>
+
+
+
+
+<!-- LES TERNAIRES -->
+<!-- Exemple : -->
+<?php
+$userAge = 24;
+
+if ($userAge >= 18) {
+	$isAdult = true;
+}
+else {
+	$isAdult = false;
+}
+?>
+
+<!-- On peut faire la même chose en une seule ligne grâce à une structure ternaire -->
+<?php
+$userAge = 24;
+
+$isAdult = ($userAge >= 18) ? true : false;
+
+// Ou mieux, dans ce cas précis
+$isAdult = ($userAge >= 18);
 ?>
