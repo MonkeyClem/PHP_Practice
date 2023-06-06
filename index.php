@@ -149,3 +149,73 @@ $isAdult = ($userAge >= 18) ? true : false;
 // Ou mieux, dans ce cas précis
 $isAdult = ($userAge >= 18);
 ?>
+
+
+                                                      <!-- LES BOUCLES ET LES TABLEAUX -->
+
+<?php
+
+// Premier utilisateur
+$userName1 = 'Mickaël Andrieu';
+$userEmail1 = 'mickael.andrieu@exemple.com';
+$userPassword1 = 'S3cr3t';
+$userAge1 = 34;
+
+// Deuxième utilisatrice
+$userName2 = 'Laurène Castor';
+$userEmail2 = 'laurene.castor@exemple.com';
+$userPassword2 = 'P4ssW0rD';
+$userAge2 = 28;
+
+// ... et ainsi de suite pour les autres utilisateurs. 
+// ATTENTION : IL NE S'AGIT PAS D'UNE BONNE PRATIQUE
+
+?>
+
+<?php
+
+$user1 = ['Mickaël Andrieu', 'email', 'S3cr3t', 34];
+
+
+echo $user1[0]; // "Mickaël Andrieu"
+echo $user1[1]; // "email"
+echo $user1[3]; // 34
+
+$mickael = ['Mickaël Andrieu', 'mickaêl.andrieu@exemple.com', 'S3cr3t', 34];
+$charlene = [ 'Charlène Soja', 'charlene.soja@exemple.com', 'S3cr3t', 31];
+$mathieu = ['Mathieu Castor', 'mathieu.castor@exemple.com', 'P4ssw0rD', 28];
+
+$users = [$mickael, $charlene, $mathieu];
+
+// Déclaration du tableau des recettes
+$recipes = [
+    ['Cassoulet','[...]','mickael.andrieu@exemple.com',true,],
+    ['Couscous','[...]','mickael.andrieu@exemple.com',false,],
+];
+
+
+echo '<br/> Salut, voici les infos de l\'index 0 du user1 :', $users[1][0], '<br/>';
+
+
+// $lines = 3; // nombre d'utilisateurs dans le tableau
+// $counter = 0;
+
+// while ($counter < $lines) {
+//     echo $users[$counter][0] . ' ' . $users[$counter][1] . '<br />';
+//     $counter++; // Ne surtout pas oublier la condition de sortie !
+// }
+
+?>
+
+<html>
+<!-- <head>
+    <title>Affichage des recettes</title>
+</head> -->
+<body>
+    <ul>
+        <?php for ($lines = 0; $lines <= 1; $lines++): ?>
+            <li><?php echo $recipes[$lines][0] . ' (' . $recipes[$lines][2] . ')'; ?></li>
+        <?php endfor; ?>
+    </ul>
+</body>
+</html>
